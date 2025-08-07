@@ -43,24 +43,23 @@ Parameters (exactly 8 per line!!! not more, not less!)
 Explanation of the parameters:
 ------------------------------
 
-- * E28, E1: Young's modulus at the age of 28 and 1 days.
-- * flowMag: Parameter q4 of the B3 model (in 1e-6/MPa!) -- responsible for the long term creep. Calibrate according to the B3 model based on the concrete composition.
+- E28, E1: Young's modulus at the age of 28 and 1 days.
+- flowMag: Parameter q4 of the B3 model (in 1e-6/MPa!) -- responsible for the long term creep. Calibrate according to the B3 model based on the concrete composition.
 - flowExponent: Parameter ef in Eq. (15), keep 1 for original B3 model (Bazant&Baweja).
 - flowDelay: Keep zero!
-- * nu: Poisson's ratio
+- nu: Poisson's ratio
 - tTransition, tDelay, vResidual: Calibrate Eq. (10)
 - kelvinMin, nKelvin: Smallest retardation time and number of Kelvin Units; You can keep those for most applications
-- * strainShrInf, TauShr: Shrinkage parameters according to the ACI model
-- * fcu28, fcu1: Uniaxial compressive strength at 28 and 1 days
+- strainShrInf, TauShr: Shrinkage parameters according to the ACI model
+- fcu28, fcu1: Uniaxial compressive strength at 28 and 1 days
 - ratioFcy, ratioFbu, ratioFtu: ratios of fcy, fbu and ftu to fcu
 - eCPP1, eCPP8, eCPP24: plastic strain at peak strenhth in uniaxial compression and 1, 8, and 24 hours. Calibrate based on expirements or use these values.
-- * Gfi: specific mode I fracture energy at 28 days
+- Gfi: specific mode I fracture energy at 28 days
 - enableDamage: Activate damage; usually 1
 - dTStatic: Time for estimating the Young's modulus; Keep at 1e-3 days for most applications
 - castTime: The time "zero" for casting of the concrete; usually 0.
-- * timeToDays: Factor for convertig Abaqus time to days, 1 if you are simulating in days.
+- timeToDays: Factor for convertig Abaqus time to days, 1 if you are simulating in days.
 - enableNonlinearCreep: enable nonlinear creep effects according to Eq. (15). 1=on, 0=off.
-* ... relevant for users
 
 Meaning of state variables:
 ---------------------------
@@ -75,4 +74,4 @@ Meaning of state variables:
 - 8: omega (damage)*
 - remaining ones: ignore
 
-* ... relevant for users
+(*) ... relevant for users
